@@ -12,7 +12,8 @@ import java.time.LocalTime;
 public class BlogPost {
     private int id;
     private String category;
-    private final String cover = "https://picsum.photos/200/300";
+    private String title;
+    private String cover;
     private String content;
     private LocalTime readingTime;
 }

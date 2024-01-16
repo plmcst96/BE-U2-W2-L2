@@ -13,7 +13,7 @@ import java.util.Random;
 public class AuthorService {
     private List<Author> authors = new ArrayList<>();
 
-    public List<Author> getUsers() {
+    public List<Author> getAuthor() {
         return this.authors;
     }
 
@@ -56,6 +56,7 @@ public class AuthorService {
                 found.setSurname(body.getSurname());
                 found.setBirthDate(body.getBirthDate());
                 found.setEmail(body.getEmail());
+                found.setAvatar(body.getAvatar());
             }
         }
         if (found == null)

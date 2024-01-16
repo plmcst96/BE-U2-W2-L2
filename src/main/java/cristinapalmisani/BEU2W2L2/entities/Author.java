@@ -16,7 +16,7 @@ public class Author {
     private String surname;
     private String email;
     private LocalDate birthDate;
-    private final String avatar = "https://ui-avatars.com/api/?name=" + this.name + "+" + this.surname;
+    private String avatar;
 
 
 }

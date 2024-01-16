@@ -13,7 +13,7 @@ import java.util.Random;
 public class BlogPostService {
     private List<BlogPost> blogs = new ArrayList<>();
 
-    public List<BlogPost> getUsers() {
+    public List<BlogPost> getBlog() {
         return this.blogs;
     }
 
@@ -54,6 +54,8 @@ public class BlogPostService {
                 found.setReadingTime(body.getReadingTime());
                 found.setCategory(body.getCategory());
                 found.setContent(body.getContent());
+                found.setCover(body.getCover());
+                found.setTitle(body.getTitle());
             }
         }
         if (found == null)
