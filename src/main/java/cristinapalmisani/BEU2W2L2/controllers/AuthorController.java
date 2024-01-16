@@ -39,6 +39,8 @@ public class AuthorController {
         return this.authorService.findByIdAndUpdate(id, body);}
 
     //DELETE elimina autore
+
+    @DeleteMapping("/{id}")
     public void findByIdAndDelete(@PathVariable long id){
         this.authorService.findByIdAndDelete(id);
     }

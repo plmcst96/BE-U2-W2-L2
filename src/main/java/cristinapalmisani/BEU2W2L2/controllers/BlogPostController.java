@@ -37,6 +37,7 @@ public class BlogPostController {
         return this.blogPostService.findByIdAndUpdate(id, body);}
 
     //DELETE elimina post
+    @DeleteMapping("/{id}")
     public void findByIdAndDelete(@PathVariable long id){
         this.blogPostService.findByIdAndDelete(id);
     }
