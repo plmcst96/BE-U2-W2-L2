@@ -48,9 +48,9 @@ public class AuthorService {
 
     public Author findByIdAndUpdate(long id, Author body) {
         Author found = null;
-        for (Author user : this.authors) {
-            if (user.getId() == id) {
-                found = user;
+        for (Author author : this.authors) {
+            if (author.getId() == id) {
+                found = author;
                 found.setId(id);
                 found.setName(body.getName());
                 found.setSurname(body.getSurname());

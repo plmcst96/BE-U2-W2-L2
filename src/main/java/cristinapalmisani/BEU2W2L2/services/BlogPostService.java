@@ -37,29 +37,29 @@ public class BlogPostService {
     }
 
     public void findByIdAndDelete(long id) {
-        Iterator<BlogPost> iterator = this.blogs.iterator();
+       Iterator<BlogPost> iterator = this.blogs.iterator();
         while (iterator.hasNext()) {
             BlogPost current = iterator.next();
             if (current.getId() == id) {
                 iterator.remove();
             }
-        }
     }
+}
 
-    public BlogPost findByIdAndUpdate(long id, BlogPost body) {
-        BlogPost found = null;
-        for (BlogPost user : this.blogs) {
-            if (user.getId() == id) {
-                found = user;
-                found.setReadingTime(body.getReadingTime());
-                found.setCategory(body.getCategory());
-                found.setContent(body.getContent());
-                found.setCover(body.getCover());
-                found.setTitle(body.getTitle());
-            }
+public BlogPost findByIdAndUpdate(long id, BlogPost body) {
+    BlogPost found = null;
+    for (BlogPost blog : blogs) {
+        if (blog.getId() == id) {
+            found = blog;
+            found.setReadingTime(body.getReadingTime());
+            found.setCategory(body.getCategory());
+            found.setContent(body.getContent());
+            found.setCover(body.getCover());
+            found.setTitle(body.getTitle());
         }
-        if (found == null)
-            throw new NotFoundException(id);
-        return found;
     }
+    if (found == null)
+        throw new NotFoundException(id);
+    return found;
+}
 }
