@@ -11,7 +11,7 @@ import java.util.List;
 @RequestMapping("/blogPosts")
 public class BlogPostController {
     @Autowired
-    private cristinapalmisani.BEU2W2L2.services.BlogPostService blogPostService;
+    private BlogPostService blogPostService;
 
     // GET lista blog
     @GetMapping
@@ -42,6 +42,4 @@ public class BlogPostController {
         this.blogPostService.findByIdAndDelete(id);
     }
 
-    private class BlogPostService {
-    }
 }
